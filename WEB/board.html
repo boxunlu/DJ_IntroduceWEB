@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> board </title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        
+        .btn1{
+            -webkit-clip-path: circle(35% at 50% 50%);
+            clip-path: circle(35% at 50% 50%);
+            border-radius: 40px;
+            border:11px solid rgb(255, 255, 255);
+            width: 60px;
+            height: 60px;
+            margin: 2px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 1.6em;
+            padding: 4px 4px 4px 4px;
+            background: radial-gradient(circle,rgb(2, 2, 5),rgba(166, 167, 168, 0.315));
+        }
+        .btn2{
+            -webkit-clip-path: circle(35% at 50% 50%);
+            clip-path: circle(35% at 50% 50%);
+            border-radius: 40px;
+            border:11px solid rgb(255, 255, 255);
+            width: 60px;
+            height: 60px;
+            margin: 2px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 1.6em;
+            padding: 3px 3px 3px 3px;
+            background: -webkit-radial-gradient(circle,white, );
+            background: -o-radial-gradient(circle,rgb(73, 175, 223),rgb(60, 187, 196));
+            background: -moz-radial-gradient(circle,rgb(81, 179, 224),rgb(45, 141, 148));
+            background: radial-gradient(circle,rgb(8, 8, 15),rgba(205, 206, 207, 0.151));
+        }
+
+        .button3div{
+            text-align:center;
+            width:350px;
+            height: 200px;
+            margin:0 auto;
+            position: absolute;
+            left: 50%;
+            margin:15px 0 0 -175px;
+            float: clear;
+        }
+
+        .botton3{
+            width:  90px;
+            height: 40px;
+            margin: 15px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 3em;
+            float: left;
+            padding: 4px 4px 4px 4px;
+        }
+
+
+        .blue0{ 
+            font-size: 2em;
+            color:rgb(169, 255, 83);
+            float: left;
+            width:50px;
+            height:50px;
+            padding: 5px;  
+            margin: 3px; 
+            border:1px solid rgb(0, 0, 0);
+            box-shadow:4px 4px 3px rgba(135, 135, 238, 0.3);
+            background: radial-gradient(circle,rgb(221, 250, 248),rgb(19, 169, 189));
+            border-radius: 5px;
+        }
+        .blue0:hover{ 
+            margin-left: 2px; 
+            border:1px solid rgb(83, 163, 228);
+            background: radial-gradient(circle,rgb(252, 255, 255),rgba(97, 204, 231, 0.973));
+        }
+        .orange1{ 
+            font-size: 2em;
+            color:rgb(169, 255, 83);
+            float: left;
+            width:50px;
+            height:50px;
+            padding: 5px;  
+            margin: 3px; 
+            border:1px solid rgb(0, 0, 0);
+            box-shadow:4px 4px 3px rgba(0, 15, 66, 0.349);
+            background: -webkit-radial-gradient(circle,white, );
+            background: -o-radial-gradient(circle,white,rgb(255, 170, 59));
+            background: -moz-radial-gradient(circle,rgb(255, 255, 255),rgb(238, 175, 58));
+            background: radial-gradient(circle,rgb(255, 239, 209),rgb(255, 181, 20));
+            border-radius: 5px;
+        }
+        .orange1:hover{ 
+            margin-left: 2px; 
+            border:1px solid rgb(250, 201, 95);
+            background: -webkit-radial-gradient(circle,white, );
+            background: -o-radial-gradient(circle,white,rgba(60, 228, 149, 0.76));
+            background: -moz-radial-gradient(circle,white,rgba(40, 255, 155, 0.76));
+            background: radial-gradient(circle,white,rgb(248, 164, 37));
+        }
+        .purple2{ 
+            font-size: 2em;
+            color:rgb(169, 255, 83);
+            float: left;
+            width:50px;
+            height:50px;
+            padding: 5px;  
+            margin: 3px; 
+            border:1px solid rgb(0, 0, 0);
+            box-shadow:4px 4px 3px rgba(135, 135, 238, 0.3);
+            background: -webkit-radial-gradient(circle,white, );
+            background: -o-radial-gradient(circle,white,rgb(255, 62, 255));
+            background: -moz-radial-gradient(circle,rgb(209, 240, 248),rgb(246, 89, 252));
+            background: radial-gradient(circle,rgb(255, 224, 246),rgb(255, 46, 203));
+            border-radius: 5px;
+        }
+        .purple2:hover{ 
+            margin-left: 2px; 
+            border:1px solid rgb(255, 156, 242);
+            background: -webkit-radial-gradient(circle,white, );
+            background: -o-radial-gradient(circle,white,rgba(60, 228, 149, 0.76));
+            background: -moz-radial-gradient(circle,white,rgba(40, 255, 155, 0.76));
+            background: radial-gradient(circle,white,rgb(255, 132, 214));
+        }
+        .yellow3{ 
+            font-size: 2em;
+            color:rgb(169, 255, 83);
+            float: left;
+            width:50px;
+            height:50px;
+            padding: 5px;  
+            margin: 3px; 
+            border:1px solid rgb(0, 0, 0);
+            box-shadow:4px 4px 3px rgba(135, 135, 238, 0.3);
+            background: -webkit-radial-gradient(circle,white, );
+            background: -o-radial-gradient(circle,white,rgb(238, 255, 85));
+            background: -moz-radial-gradient(circle,rgb(209, 240, 248),rgb(236, 234, 94));
+            background: radial-gradient(circle,rgb(251, 255, 211),rgb(245, 242, 60));
+            border-radius: 5px;
+        }
+        .yellow3:hover{ 
+            margin-left: 2px; 
+            border:1px solid rgb(253, 255, 163);
+            background: -webkit-radial-gradient(circle,white, );
+            background: -o-radial-gradient(circle,white,rgba(60, 228, 149, 0.76));
+            background: -moz-radial-gradient(circle,white,rgba(40, 255, 155, 0.76));
+            background: radial-gradient(circle,white,rgb(249, 252, 85));
+        }
+        .skyblue4{ 
+            font-size: 2em;
+            color:rgb(169, 255, 83);
+            float: left;
+            width:50px;
+            height:50px;
+            padding: 5px;  
+            margin: 3px; 
+            border:1px solid rgb(0, 0, 0);
+            box-shadow:4px 4px 3px rgba(135, 135, 238, 0.3);
+            background: -webkit-radial-gradient(circle,white, );
+            background: -o-radial-gradient(circle,white,rgb(106, 245, 255));
+            background: -moz-radial-gradient(circle,rgb(209, 240, 248),rgb(157, 248, 255));
+            background: radial-gradient(circle,rgb(237, 255, 253),rgb(121, 241, 250));
+            border-radius: 5px;
+        }
+        .skyblue4:hover{ 
+            margin-left: 2px; 
+            border:1px solid rgb(160, 248, 248);
+            background: -webkit-radial-gradient(circle,white, );
+            background: -o-radial-gradient(circle,white,rgba(60, 228, 149, 0.76));
+            background: -moz-radial-gradient(circle,white,rgba(40, 255, 155, 0.76));
+            background: radial-gradient(circle,white,rgba(151, 248, 252, 0.952));
+        }
+        .blue5{ 
+            font-size: 2em;
+            color:rgb(169, 255, 83);
+            float: left;
+            width:50px;
+            height:50px;
+            padding: 5px;  
+            margin: 3px; 
+            border:1px solid rgb(0, 0, 0);
+            box-shadow:4px 4px 3px rgba(135, 135, 238, 0.3);
+            background: -webkit-radial-gradient(circle,white, );
+            background: -o-radial-gradient(circle,white,rgb(88, 165, 236));
+            background: -moz-radial-gradient(circle,rgb(209, 240, 248),rgb(62, 192, 243));
+            background: radial-gradient(circle,rgb(207, 241, 255),rgb(39, 189, 235));
+            border-radius: 5px;
+        }
+        .blue5:hover{ 
+            margin-left: 2px; 
+            border:1px solid rgb(102, 184, 223);
+            background: -webkit-radial-gradient(circle,white, );
+            background: -o-radial-gradient(circle,white,rgba(60, 228, 149, 0.76));
+            background: -moz-radial-gradient(circle,white,rgba(40, 255, 155, 0.76));
+            background: radial-gradient(circle,white,rgba(50, 222, 235, 0.863));
+        }
+        .lightblue6{ 
+            font-size: 2em;
+            color:rgb(169, 255, 83);
+            float: left;
+            width:50px;
+            height:50px;
+            padding: 5px;  
+            margin: 3px; 
+            border:1px solid rgb(114, 183, 247);
+            box-shadow:4px 4px 3px rgba(135, 135, 238, 0.3);
+            background: -webkit-radial-gradient(circle,white, );
+            background: -o-radial-gradient(circle,white,rgb(131, 184, 245));
+            background: -moz-radial-gradient(circle,rgb(209, 240, 248),rgb(156, 208, 231));
+            background: radial-gradient(circle,rgb(206, 245, 255),rgb(103, 186, 224));
+            border-radius: 5px;
+        }
+        .lightblue6:hover{ 
+            margin-left: 2px; 
+            border:1px solid rgb(70, 194, 194);
+            background: -webkit-radial-gradient(circle,white, );
+            background: -o-radial-gradient(circle,white,rgba(60, 228, 149, 0.76));
+            background: -moz-radial-gradient(circle,white,rgba(40, 255, 155, 0.76));
+            background: radial-gradient(circle,white,rgba(77, 200, 231, 0.884));
+        }
+        .green7{ 
+            font-size: 2em;
+            color:rgb(169, 255, 83);
+            float: left;
+            width:50px;
+            height:50px;
+            padding: 5px;  
+            margin: 3px; 
+            border:1px solid rgb(2, 2, 2);
+            box-shadow:4px 4px 3px rgba(135, 135, 238, 0.3);
+            background: -webkit-radial-gradient(circle,white, );
+            background: -o-radial-gradient(circle,white,rgb(78, 231, 72));
+            background: -moz-radial-gradient(circle,rgb(209, 240, 248),rgb(43, 252, 137));
+            background: radial-gradient(circle,rgb(200, 255, 193),rgba(31, 255, 98, 0.932));
+            border-radius: 5px;
+        }
+        .green7:hover{ 
+            margin-left: 2px; 
+            border:1px solid rgb(135, 255, 189);
+            background: -webkit-radial-gradient(circle,white, );
+            background: -o-radial-gradient(circle,white,rgba(60, 228, 149, 0.76));
+            background: -moz-radial-gradient(circle,white,rgba(40, 255, 155, 0.76));
+            background: radial-gradient(circle,white,rgba(63, 255, 166, 0.87));
+        }
+    
+        #board{
+                text-align:center;
+            background-color: black;
+            width:546px;
+            height:670px; 
+            margin:0 auto;
+            clear: left;
+        }
+    </style>
+</head>
+<body onload="setup()">
+
+        <audio id = "A0" preload ="auto">
+                <source src = "ApianoC.mp3" type = "audio/mpeg">
+        </audio>
+        <audio id = "A1" preload ="auto">
+                <source src = "ApianoD.mp3" type = "audio/mpeg">
+        </audio>
+        <audio id = "A2" preload ="auto">
+                <source src = "ApianoE.mp3" type = "audio/mpeg">
+        </audio>
+        <audio id = "A3" preload ="auto">
+                <source src = "ApianoF.mp3" type = "audio/mpeg">
+        </audio>
+        <audio id = "A4" preload ="auto">
+                <source src = "ApianoG.mp3" type = "audio/mpeg">
+        </audio>
+        <audio id = "A5" preload ="auto">
+                <source src = "ApianoA.mp3" type = "audio/mpeg">
+        </audio>
+        <audio id = "A6" preload ="auto">
+                <source src = "ApianoB.mp3" type = "audio/mpeg">
+        </audio>
+        <audio id = "A7" preload ="auto">
+                <source src = "ApianoC2.mp3" type = "audio/mpeg">
+        </audio>
+
+        <audio id = "B0" preload ="auto">
+                <source src = "B1piano-a_A_major.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "B1" preload ="auto">
+                <source src = "ApianoC2.mp3" type = "audio/mpeg">
+        </audio>
+        <audio id = "B2" preload ="auto">
+                <source src = "B3piano-b_B_major.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "B3" preload ="auto">
+                <source src = "B4piano-c_C_major.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "B4" preload ="auto">
+                <source src = "ApianoD.mp3" type = "audio/mpeg">
+        </audio>
+        <audio id = "B5" preload ="auto">
+                <source src = "B6synth-cut-086_A_minor.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "B6" preload ="auto">
+                <source src = "B7synth-cut-110_D_minor.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "B7" preload ="auto">
+                <source src = "B8synth-cut-034_E_minor.wav" type = "audio/mpeg">
+        </audio>
+
+        <audio id = "C0" preload ="auto">
+                <source src = "C1.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "C1" preload ="auto">
+                <source src = "C2.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "C2" preload ="auto">
+                <source src = "C3.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "C3" preload ="auto">
+                <source src = "C4.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "C4" preload ="auto">
+                <source src = "ApianoD.mp3" type = "audio/mpeg">
+        </audio>
+        <audio id = "C5" preload ="auto">
+                <source src = "ApianoE.mp3" type = "audio/mpeg">
+        </audio>
+        <audio id = "C6" preload ="auto">
+                <source src = "ApianoF.mp3" type = "audio/mpeg">
+        </audio>
+        <audio id = "C7" preload ="auto">
+                <source src = "C8.wav" type = "audio/mpeg">
+        </audio>
+
+        <audio id = "D0" preload ="auto">
+                <source src = "D1piano-cut-01_B_minor.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "D1" preload ="auto">
+                <source src = "D2piano-cut-02_A_minor.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "D2" preload ="auto">
+                <source src = "D3piano-cut-03_A_minor.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "D3" preload ="auto">
+                <source src = "D4piano-cut-04_E_minor.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "D4" preload ="auto">
+                <source src = "D5piano-cut-05_B_minor.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "D5" preload ="auto">
+                <source src = "D6piano-cut-06_B.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "D6" preload ="auto">
+                <source src = "D7piano-cut-07.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "D7" preload ="auto">
+                <source src = "D8piano-cut-08_A_minor.wav" type = "audio/mpeg">
+        </audio>
+
+        <audio id = "E0" preload ="auto">
+                <source src = "E1piano-cut-09.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "E1" preload ="auto">
+                <source src = "E2piano-cut-10_A_minor.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "E2" preload ="auto">
+                <source src = "ApianoC.mp3" type = "audio/mpeg">
+        </audio>
+        <audio id = "E3" preload ="auto">
+                <source src = "ApianoC2.mp3" type = "audio/mpeg">
+        </audio>
+        <audio id = "E4" preload ="auto">
+                <source src = "E5piano-d_D_major.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "E5" preload ="auto">
+                <source src = "E6piano-e_E_major.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "E6" preload ="auto">
+                <source src = "B7synth-cut-110_D_minor.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "E7" preload ="auto">
+                <source src = "B8synth-cut-034_E_minor.wav" type = "audio/mpeg">
+        </audio>
+
+        <audio id = "F0" preload ="auto">
+                <source src = "F1one-shot-synth-chord_G_major.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "F1" preload ="auto">
+                <source src = "F2piano-a_A_major.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "F2" preload ="auto">
+                <source src = "F3piano-b_B_major.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "F3" preload ="auto">
+                <source src = "F4piano-c_C_major.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "F4" preload ="auto">
+                <source src = "F5piano-d_D_major.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "F5" preload ="auto">
+                <source src = "F6piano-e_E_major.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "F6" preload ="auto">
+                <source src = "F7piano-f_F_major.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "F7" preload ="auto">
+                <source src = "F8piano-g_G_major.wav" type = "audio/mpeg">
+        </audio>
+
+        <audio id = "G0" preload ="auto">
+                <source src = "G1 35__.mp3" type = "audio/mpeg">
+        </audio>
+        <audio id = "G1" preload ="auto">
+                <source src = "G2.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "G2" preload ="auto">
+                <source src = "G3crisp-korg-snare.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "G3" preload ="auto">
+                <source src = "G48bit-pluck_70bpm_G_minor.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "G4" preload ="auto">
+                <source src = "G5beautiful-day-synth-keys_A_minor.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "G5" preload ="auto">
+                <source src = "D6piano-cut-06_B.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "G6" preload ="auto">
+                <source src = "D7piano-cut-07.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "G7" preload ="auto">
+                <source src = "C8.wav" type = "audio/mpeg">
+        </audio>
+
+        <audio id = "H0" preload ="auto">
+                <source src = "H0.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "H1" preload ="auto">
+                <source src = "H1.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "H2" preload ="auto">
+                <source src = "H2good-feeling-piano_A_minor.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "H3" preload ="auto">
+                <source src = "H3good-feeling-piano_E_minor.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "H4" preload ="auto">
+                <source src = "H4good-feeling-piano_F_major.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "H5" preload ="auto">
+                <source src = "H5.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "H6" preload ="auto">
+                <source src = "H6.wav" type = "audio/mpeg">
+        </audio>
+        <audio id = "H7" preload ="auto">
+                <source src = "F8piano-g_G_major.wav" type = "audio/mpeg">
+        </audio>
+    
+
+    <div id="board">
+            <div id = "buttonbar1">
+                    <button class ="btn1" onclick="speedup(A)" id="btnupA">+</button>
+                    <button class ="btn1" onclick="speedup(B)" id="btnupB">+</button>
+                    <button class ="btn1" onclick="speedup(C)" id="btnupC">+</button>
+                    <button class ="btn1" onclick="speedup(D)" id="btnupD">+</button>
+                    <button class ="btn1" onclick="speedup(E)" id="btnupE">+</button>
+                    <button class ="btn1" onclick="speedup(F)" id="btnupF">+</button>
+                    <button class ="btn1" onclick="speedup(G)" id="btnupG">+</button>
+                    <button class ="btn1" onclick="speedup(H)" id="btnupH">+</button>
+                </div>
+                        <div  class="blue0" onclick="doClick( 0, 0 )" id="cell00"></div>
+                        <div  class="orange1" onclick="doClick( 0, 1 )" id="cell01"></div>
+                        <div  class="purple2" onclick="doClick( 0, 2 )" id="cell02"></div>
+                        <div  class="yellow3" onclick="doClick( 0, 3 )" id="cell03"></div>
+                        <div  class="skyblue4" onclick="doClick( 0, 4 )" id="cell04"></div>
+                        <div  class="blue5" onclick="doClick( 0, 5 )" id="cell05"></div>
+                        <div  class="lightblue6" onclick="doClick( 0, 6 )" id="cell06"></div>
+                        <div  class="green7" onclick="doClick( 0, 7 )" id="cell07"></div><p><br></p>
+                        
+                        <div  class="blue0" onclick="doClick( 1, 0 )" id="cell10"></div>
+                        <div  class="orange1" onclick="doClick( 1, 1 )" id="cell11"></div>
+                        <div  class="purple2" onclick="doClick( 1, 2 )" id="cell12"></div>
+                        <div  class="yellow3" onclick="doClick( 1, 3 )" id="cell13"></div>
+                        <div  class="skyblue4" onclick="doClick( 1, 4 )" id="cell14"></div>
+                        <div  class="blue5" onclick="doClick( 1, 5 )" id="cell15"></div>
+                        <div  class="lightblue6" onclick="doClick( 1, 6 )" id="cell16"></div>
+                        <div  class="green7" onclick="doClick( 1, 7 )" id="cell17"></div><p><br></p>
+
+                        <div  class="blue0" onclick="doClick( 2, 0 )" id="cell20"></div>
+                        <div  class="orange1" onclick="doClick( 2, 1 )" id="cell21"></div>
+                        <div  class="purple2" onclick="doClick( 2, 2 )" id="cell22"></div>
+                        <div  class="yellow3" onclick="doClick( 2, 3 )" id="cell23"></div>
+                        <div  class="skyblue4" onclick="doClick( 2, 4 )" id="cell24"></div>
+                        <div  class="blue5" onclick="doClick( 2, 5 )" id="cell25"></div>
+                        <div  class="lightblue6" onclick="doClick( 2, 6 )" id="cell26"></div>
+                        <div  class="green7" onclick="doClick( 2, 7 )" id="cell27"></div><p><br></p>
+
+                        <div  class="blue0" onclick="doClick( 3, 0 )" id="cell30"></div>
+                        <div  class="orange1" onclick="doClick( 3, 1 )" id="cell31"></div>
+                        <div  class="purple2" onclick="doClick( 3, 2 )" id="cell32"></div>
+                        <div  class="yellow3" onclick="doClick( 3, 3 )" id="cell33" style = "border-bottom-right-radius:25px"></div>
+                        <div  class="skyblue4" onclick="doClick( 3, 4 )" id="cell34" style = "border-bottom-left-radius:25px"></div>
+                        <div  class="blue5" onclick="doClick( 3, 5 )" id="cell35"></div>
+                        <div  class="lightblue6" onclick="doClick( 3, 6 )" id="cell36"></div>
+                        <div  class="green7" onclick="doClick( 3, 7 )" id="cell37"></div><p><br></p>
+
+                        <div  class="blue0" onclick="doClick( 4, 0 )" id="cell40"></div>
+                        <div  class="orange1" onclick="doClick( 4, 1 )" id="cell41"></div>
+                        <div  class="purple2" onclick="doClick( 4, 2 )" id="cell42"></div>
+                        <div  class="yellow3" onclick="doClick( 4, 3 )" id="cell43" style = "border-top-right-radius:25px"></div>
+                        <div  class="skyblue4" onclick="doClick( 4, 4 )" id="cell44" style = "border-top-left-radius:25px"></div>
+                        <div  class="blue5" onclick="doClick( 4, 5 )" id="cell45"></div>
+                        <div  class="lightblue6" onclick="doClick( 4, 6 )" id="cell46"></div>
+                        <div  class="green7" onclick="doClick( 4, 7 )" id="cell47"></div><p><br></p>
+
+                        <div  class="blue0" onclick="doClick( 5, 0 )" id="cell50"></div>
+                        <div  class="orange1" onclick="doClick( 5, 1 )" id="cell51"></div>
+                        <div  class="purple2" onclick="doClick( 5, 2 )" id="cell52"></div>
+                        <div  class="yellow3" onclick="doClick( 5, 3 )" id="cell53"></div>
+                        <div  class="skyblue4" onclick="doClick( 5, 4 )" id="cell54"></div>
+                        <div  class="blue5" onclick="doClick( 5, 5 )" id="cell55"></div>
+                        <div  class="lightblue6" onclick="doClick( 5, 6 )" id="cell56"></div>
+                        <div  class="green7" onclick="doClick( 5, 7 )" id="cell57"></div><p><br></p>
+
+                        <div  class="blue0" onclick="doClick( 6, 0 )" id="cell60"></div>
+                        <div  class="orange1" onclick="doClick( 6, 1 )" id="cell61"></div>
+                        <div  class="purple2" onclick="doClick( 6, 2 )" id="cell62"></div>
+                        <div  class="yellow3" onclick="doClick( 6, 3 )" id="cell63"></div>
+                        <div  class="skyblue4" onclick="doClick( 6, 4 )" id="cell64"></div>
+                        <div  class="blue5" onclick="doClick( 6, 5 )" id="cell65"></div>
+                        <div  class="lightblue6" onclick="doClick( 6, 6 )" id="cell66"></div>
+                        <div  class="green7" onclick="doClick( 6, 7 )" id="cell67"></div><p><br></p>
+
+                        <div  class="blue0" onclick="doClick( 7, 0 )" id="cell70"></div>
+                        <div  class="orange1" onclick="doClick( 7, 1 )" id="cell71"></div>
+                        <div  class="purple2" onclick="doClick( 7, 2 )" id="cell72"></div>
+                        <div  class="yellow3" onclick="doClick( 7, 3 )" id="cell73"></div>
+                        <div  class="skyblue4" onclick="doClick( 7, 4 )" id="cell74"></div>
+                        <div  class="blue5" onclick="doClick( 7, 5 )" id="cell75"></div>
+                        <div  class="lightblue6" onclick="doClick( 7, 6 )" id="cell76"></div>
+                        <div  class="green7" onclick="doClick( 7, 7 )" id="cell77"></div><p><br></p>
+                
+                        <div id = "buttonbar2">
+                                <button class ="btn2" onclick="speeddown(A);" id="btn21">-</button>
+                                <button class ="btn2" onclick="speeddown(B);" id="btn22">-</button>
+                                <button class ="btn2" onclick="speeddown(C);" id="btn23">-</button>
+                                <button class ="btn2" onclick="speeddown(D);" id="btn24">-</button>
+                                <button class ="btn2" onclick="speeddown(E);" id="btn21">-</button>
+                                <button class ="btn2" onclick="speeddown(F);" id="btn22">-</button>
+                                <button class ="btn2" onclick="speeddown(G);" id="btn23">-</button>
+                                <button class ="btn2" onclick="speeddown(H);" id="btn24">-</button>  
+                        </div>
+                </div>    
+        </div>
+        <div class ="button3div">
+                        <button class ="button3" id="autoPlaybtn">Auto Play</button>
+                     
+        </div>
+    </p>
+    <div id="msg"></div>
+</body>
+<script type="text/javascript">
+
+        function start()
+        { 
+                var autoPlaybtn = document.getElementById( "autoPlaybtn" );
+                autoPlaybtn.addEventListener( "click", autoplay, false );
+               
+        } // end function start
+        var autoplaybool = false;
+        var autoInterval;
+        function autoplay()
+        {     
+                if(!autoplaybool){
+                        autoplaybool = true;
+                        autoInterval = setInterval(autoplayaudio, 1000);
+                        console.log(autoplaybool);
+                } 
+                else if(autoplaybool){
+                        autoplaybool = false;
+                        clearInterval(autoInterval);
+                        console.log(autoplaybool);
+                }
+        }
+
+        function autoplayaudio(){
+                var x = Math.floor( Math.random() * 8 );
+                var y = Math.floor( Math.random() * 8 );
+                
+                str = "";
+                str = str.concat("cell");
+                str = str.concat(x.toString());
+                str = str.concat(y.toString());
+                doClick(x, y);  
+                console.log(str);
+        }
+
+        function record()
+        { }
+
+        function play()
+        { }
+
+        function clear()
+        { }
+
+        window.addEventListener( "load", start, false );
+
+
+    function speedup(A){
+       var str = "";
+       str = str.concat(toString(A));
+       for(var i=0; i<8; i++){
+            str = "";
+            str = str.concat(A.toString());
+            str = str.concat(i.toString());
+            document.getElementById(str).playbackRate += 0.3;
+       }  
+    }   
+    function speeddown(A){
+         var str = "";
+         str = str.concat(toString(A));
+         for(var i=0; i<8; i++){
+            str = "";
+            str = str.concat(A.toString());
+            str = str.concat(i.toString());
+            document.getElementById(str).playbackRate -= 0.3;
+        }  
+    } 
+     function doClick(row, column){
+        if(row == 0 && column == 0) A0.play();
+        if(row == 1 && column == 0) A1.play();
+        if(row == 2 && column == 0) A2.play();
+        if(row == 3 && column == 0) A3.play();
+        if(row == 4 && column == 0) A4.play();
+        if(row == 5 && column == 0) A5.play();
+        if(row == 6 && column == 0) A6.play();
+        if(row == 7 && column == 0) A7.play();
+
+        if(row == 0 && column == 1) B0.play();
+        if(row == 1 && column == 1) B1.play();
+        if(row == 2 && column == 1) B2.play();
+        if(row == 3 && column == 1) B3.play();
+        if(row == 4 && column == 1) B4.play();
+        if(row == 5 && column == 1) B5.play();
+        if(row == 6 && column == 1) B6.play();
+        if(row == 7 && column == 1) B7.play();
+
+        if(row == 0 && column == 2) C0.play();
+        if(row == 1 && column == 2) C1.play();
+        if(row == 2 && column == 2) C2.play();
+        if(row == 3 && column == 2) C3.play();
+        if(row == 4 && column == 2) C4.play();
+        if(row == 5 && column == 2) C5.play();
+        if(row == 6 && column == 2) C6.play();
+        if(row == 7 && column == 2) C7.play();
+
+        if(row == 0 && column == 3) D0.play();
+        if(row == 1 && column == 3) D1.play();
+        if(row == 2 && column == 3) D2.play();
+        if(row == 3 && column == 3) D3.play();
+        if(row == 4 && column == 3) D4.play();
+        if(row == 5 && column == 3) D5.play();
+        if(row == 6 && column == 3) D6.play();
+        if(row == 7 && column == 3) D7.play();
+
+        if(row == 0 && column == 4) E0.play();
+        if(row == 1 && column == 4) E1.play();
+        if(row == 2 && column == 4) E2.play();
+        if(row == 3 && column == 4) E3.play();
+        if(row == 4 && column == 4) E4.play();
+        if(row == 5 && column == 4) E5.play();
+        if(row == 6 && column == 4) E6.play();
+        if(row == 7 && column == 4) E7.play();
+
+        if(row == 0 && column == 5) F0.play();
+        if(row == 1 && column == 5) F1.play();
+        if(row == 2 && column == 5) F2.play();
+        if(row == 3 && column == 5) F3.play();
+        if(row == 4 && column == 5) F4.play();
+        if(row == 5 && column == 5) F5.play();
+        if(row == 6 && column == 5) F6.play();
+        if(row == 7 && column == 5) F7.play();
+
+        if(row == 0 && column == 6) G0.play();
+        if(row == 1 && column == 6) G1.play();
+        if(row == 2 && column == 6) G2.play();
+        if(row == 3 && column == 6) G3.play();
+        if(row == 4 && column == 6) G4.play();
+        if(row == 5 && column == 6) G5.play();
+        if(row == 6 && column == 6) G6.play();
+        if(row == 7 && column == 6) G7.play();
+
+        if(row == 0 && column == 7) H0.play();
+        if(row == 1 && column == 7) H1.play();
+        if(row == 2 && column == 7) H2.play();
+        if(row == 3 && column == 7) H3.play();
+        if(row == 4 && column == 7) H4.play();
+        if(row == 5 && column == 7) H5.play();
+        if(row == 6 && column == 7) H6.play();
+        if(row == 7 && column == 7) H7.play();
+    }
+   
+    function setup(){
+
+    }
+    </script>
+</html>
